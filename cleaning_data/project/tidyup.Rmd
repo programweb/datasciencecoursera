@@ -1,0 +1,36 @@
+---
+title: "Getting and Cleaning Data Course Project"
+author: "Allan Searle"
+date: "September 26, 2015"
+output: html_document
+---
+
+Merge data and alter with improved column names and descriptive activities; finally make data tidy and write to file.  
+
+Create an R script called **run_analysis.R** that does the following:   
+
+1. Merges the training and the test sets to create one data set.  
+*I thought of this as the original data:*  
+```origData <- cbind(features,activity,subject)```  
+
+2. Extracts only the measurements on the mean and standard deviation for each measurement.   
+*Just get the desired column numbers to alter (reduce) the original data*  
+```alteredData <- origData[,colNums]```  
+
+3. Uses descriptive activity names to name the activities in the data set    
+*Yea, because the numbers one to six are not really working for me sweetheart.*
+
+4. Appropriately labels the data set with descriptive variable names.    
+*Basically, change column names that would otherwise ONLY be understood by one MIT professor and two aliens walking around the Pentagon*  
+
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.    
+*After you have that tidy dataset, write it out to a text file (later print it out and hang on the wall)*  
+```write.table(tidydataset, file = "tidydataset.txt", row.names = FALSE)```  
+
+
+
+###If you would excuse me now, I'd like to write some R
+```{r}
+dt <- Sys.Date()
+dt
+```
